@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "paybooc-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "paybooc-Medium";
+}
+
+.h3 {
+  padding: 10px 0px 10px 0px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.ma0 {
+  margin: 0px;
+  padding: 0px;
+}
+.pa10 {
+  padding: 10px;
+  margin: 0px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.bd1c {
+  border: 1px solid #ccc;
+}
+.bdb1c {
+  border-bottom: 1px solid #ccc !important;
+}
+.w5 {
+  width: 5px;
+}
+
+.textLeft {
+  text-align: left; 
+}
+.text-right {
+  font-size: 13px !important;
+  text-align: right;
+}
+.textRight {
+  text-align: right;
+}
+.textCenter {
+  text-align: center;
+}
+.margin-top{
+  margin-top: 3px;
+}
+#rightTbl td {
+  font-size: 13px;
+}
+
+#grid * {
+  font-size: 13px;
+}
+#grid th {
+  font-size: 13px;
+}
+
+.txt13 {
+  font-size: 13px;
+}
+.txt12 {
+  font-size: 12px;
+}
+
+.txt12 input {
+  font-size: 12px;
+  padding: 3px;
+  height: auto;
+}
+
+#loadRight .tit {
+  font-size: 14px;
+}
+#loadRight .stxt {
+  font-size: 11px;
+  white-space: wrap;
+}
+.alert {
+  font-size: 12px;
+  color: #f00;
+  white-space: nowrap;
+}
+
+.txtRed {
+  color: #f00;
+}
+.rticon {
+  background-image: url("/img/rticon.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+#iconToggle {
+  color: #666;
+}
+
+.red {
+  background-color: #fff;
+}
+.redbg {
+  background-color: #fdd !important;
+}
+
+.rightTitleInfo {
+  background-color: #eee;
+  padding: 7px 12px;
+  height: 35px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.bg-primary {
+  background-color: #1ab394;
+  border-color: #1ab394;
+}
+
+.modal-xx {
+  max-width: 1300px !important;
+}
+.modal-full {
+  max-width: 95% !important;
+}
+
+.btn-cancel {
+  font-size: 11px !important;
+  padding: 2px 11px;
+  margin: 0px;
+}
+
+.redRow {
+  background-color: #f8ac59 !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fullscreen {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+div.datepicker {
+  z-index: 9999999 !important;
+}
+
+input::placeholder {
+  color: #ccc !important;
+}
+textarea::placeholder {
+  color: #ccc !important;
+}
+
+.tui-grid-cell.currency {
+  text-align: right !important;
+}
+.tui-grid-cell.currency:before {
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.bgGray {
+  background-color: #e9ecef !important;
+}
+.bgWhite {
+  background-color: #fff !important;
+}
+.
+
+.tui-pagination {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+.tui-ico-first,
+.tui-ico-last {
+  font-size: 0.1;
+  color: #eee !important;
+  display: none;
+}
+
+.dup {
+  color: #f00 !important;
+}
+
+.font-primary {
+  color: #1fb396 !important;
+}
+
+.redBg {
+  background-color: #f8ac59 !important;
+  color: #fff;
+}
+.bgRed {
+  background-color: #ffeeee !important;
+  
+}
+
+.bg-yellow {
+  background-color: #ffffaa !important;
+}
+
+.tbl {
+  width: 100%;
+}
+.tbl thead td {
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 10px;
+}
+
+.tbl td {
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  padding: 5px;
+}
+.tbl td:last-child {
+  border-right: none;
+}
+
+.btn-darkgray {
+  background-color: #888888;
+  border-color: #888888;
+  color:#eee   !important; 
+}
+
+.btn-darkgray:hover {
+  background-color: #888888;
+  border-color: #888888;
+  cursor:default; 
+  color:#eee !important; 
+}
+
+
+.text-red{
+  color:#f00; 
+}
+
+.yBG{background-color:#ffff80 !important;}
+
+.activeColor{background-color:#A3E1D4 !important; }

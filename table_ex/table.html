@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-reboot.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="style.css" rel="stylesheet">
+  <link href="dada.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'paybooc-Medium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      font-family: 'paybooc-Medium'
+    }
+
+    small {
+      font-size: 0.9em;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    
+    <nav class="navbar-default navbar-static-side " id="leftNavi" role="navigation">
+      <div class="sidebar-collapse">
+        <div style="padding:10px; padding-top:40px; padding-bottom:40px; text-align:center;  ">
+          <a href="table2.html"><img src="logo.png" width="70%"></a>
+        </div>
+        <ul class="nav metismenu" id="side-menu">
+          <li class="">
+            <a href="#"><i class="fa fa-th-list" style="font-size:1.1em; vertical-align: middle; width: 17px; text-align: center;"></i>
+              <span class="nav-label" style="font-weight:normal; font-size:1.1em; margin-left:5px;">상품관리</span>
+              <span class="fa arrow"></span>
+            </a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li class=" inmenu">
+                  <a href="/3pl/product/">상품관리</a>
+                </li>
+                <li class=" inmenu">
+                  <a href="/3pl/location/"> 재고/로케이션 관리</a>
+                </li>
+                <li class=" inmenu">
+                  <a href="/3pl/move/">보충지시/처리</a>
+                </li>
+              </ul>
+          </li>
+          <li class="">
+            <a href="#"><i class="fa fa-sign-in" style="font-size:1.1em; vertical-align: middle; width: 17px; text-align: center;"></i>
+                <span class="nav-label" style="font-weight:normal; font-size:1.1em; margin-left:5px;">입고관리</span>
+                <span class="fa arrow"></span>
+            </a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li class=" inmenu">
+                  <a href="/3pl/request/">입고확인/입력</a>
+                </li>
+              </ul>
+          </li>
+          <li class="">
+            <a href="#"><i class="fa fa-truck" style="font-size:1.1em; vertical-align: middle; width: 17px; text-align: center;"></i>
+              <span class="nav-label" style="font-weight:normal; font-size:1.1em; margin-left:5px;">출고관리</span>
+              <span class="fa arrow"></span>
+            </a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li class="inmenu">
+                  <a href="table2.html">출고/현황</a>
+                </li>
+              </ul>
+          </li>
+          <li class="">
+            <a href="#"><i class="fa fa-headphones" style="font-size:1.1em; vertical-align: middle; width: 17px; text-align: center;"></i>
+              <span class="nav-label" style="font-weight:normal; font-size:1.1em; margin-left:5px;">CS관리</span>
+              <span class="fa arrow"></span>
+            </a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li class=" inmenu">
+                  <a href="/3pl/shipback/">회수관리</a>
+                </li>
+              </ul>
+          </li>
+          <li class="">
+            <a href="#"><i class="fa fa-child" style="font-size:1.1em; vertical-align: middle; width: 17px; text-align: center;"></i>
+              <span class="nav-label" style="font-weight:normal; font-size:1.1em; margin-left:5px;">작업요청</span>
+              <span class="fa arrow"></span>
+            </a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li class=" inmenu">
+                  <a href="/3pl/work/"> 작업처리/현황 </a>
+                </li>
+              </ul>
+          </li>
+          <li class="">
+            <a href="#"><i class="fa fa-address-card" style="font-size:1.1em; vertical-align: middle; width: 17px; text-align: center;"></i>
+              <span class="nav-label" style="font-weight:normal; font-size:1.1em; margin-left:5px;">기본정보</span>
+              <spa class="fa arrow"></spa>
+            </a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li class=" inmenu">
+                  <a href="/3pl/info/"> 기본/택배사 </a>
+                </li>
+                <li class=" inmenu">
+                  <a href="/3pl/account/"> 계정관리 </a>
+                </li>
+                <li class=" inmenu">
+                  <a href="/3pl/package/"> 부자재관리 </a>
+                </li>
+                <li class=" inmenu">
+                  <a href="/3pl/client/"> 고객사관리 </a>
+                </li>
+              </ul>
+          </li>
+          <li class="">
+            <a href="#"><i class="fa fa-line-chart" style="font-size:1.1em; vertical-align: middle;"></i>
+              <span class="nav-label" style="font-weight:normal; font-size:1.1em; margin-left: 5px;"> 정산</span>
+              <span class="fa arrow"></span>
+            </a>
+              <ul class="nav nav-second-level collapse" aria-expanded="false">
+                <li class="inmenu  ">
+                  <a href="/3pl/searchSendCode/"> 송장별 업체분류 </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="active">
+            <a href="#"><i class="fa fa-line-chart" style="font-size:1.1em; vertical-align: middle;"></i>
+              <span class="nav-label" style="font-weight:normal; font-size:1.1em; color:#fff; margin-left: 5px;">
+                자동 주문수집</span>
+              <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level collapse in" aria-expanded="true">
+              <li class="active inmenu">
+                <a href="table.html"> 주문현황 </a>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+    <div id="page-wrapper" class="gray-bg">
+      <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style=" height:55px; overflow:hidden;">
+          <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#" style="margin:15px; ">
+              <i class="fa fa-bars"></i>
+            </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+              <div class="form-group">
+                <input type="text" class="form-control" value="2022-04-20" readonly="" style="font-size:16px; ">
+              </div>
+            </form>
+          </div>
+          <ul class="nav navbar-top-links navbar-right">
+            <li>
+              <a href="https://anydesk.com/en/downloads/thank-you?dv=win_exe" target="_blank">
+                <i class="fa fa-desktop" style="font-size:1em; margin-right:5px; vertical-align: middle;"></i>원격지원
+              </a>
+            </li>
+            <li style="padding-right:30px; ">
+              <table>
+                <tbody>
+                  <tr>
+                    <td style="padding:0  10px; color:#999c9e; font-size:14px;"> 고객사 로그인 </td>
+                    <td>
+                      <select name="autoLoginId" id="autoLoginId" class="searchInput form-control form-control-sm ">
+                        <option value="">고객사</option>
+                        <option value="반팔">2much</option>
+                        <option value="CJW">CJW</option>
+                        <option value="뮤지엄">더티셔츠뮤지엄</option>
+                        <option value="바이알루">바이알루</option>
+                        <option value="비원">비원비오에프</option>
+                        <option value="빅밴드앤코">빅밴드앤코</option>
+                        <option value="빅밴드">빅밴드파트너스</option>
+                        <option value="사유">사유</option>
+                        <option value="상암본사">상암본사</option>
+                        <option value="선탑">선탑</option>
+                        <option value="아마로">아마로</option>
+                        <option value="아이돈케어">아이돈케어</option>
+                        <option value="아이린">아이린</option>
+                        <option value="아이아워">아이아워</option>
+                        <option value="아트앤디자인">아트앤디자인</option>
+                        <option value="원오세븐">원오세븐</option>
+                        <option value="유림">유림 인터네셔널</option>
+                        <option value="자바나스">자바나스</option>
+                        <option value="제이피리테일">제이피리테일</option>
+                        <option value="컴퍼니에이치">컴퍼니에이치</option>
+                        <option value="트리플에스">트리플에스</option>
+                        <option value="플레이윈">플레이윈</option>
+                        <option value="필론">필론</option>
+                        <option value="필론어패럴">필론어패럴</option>
+                      </select>
+                    </td>
+                    <td style="padding-left: 5px;">
+                      <button type="button" class="btn btn-primary  btn-xs" onclick="autoLogin(); return false;">
+                        <i class="fa fa-user-circle" style="text-align:center; margin:3px;"></i> 로그인
+                      </button>
+                      <script>
+                        function autoLogin() {
+                          var a = $("#autoLoginId").val();
+                          if (a == "" || a == undefined) {
+                            alert('고객사를 선택해주세요.');
+                            return;
+                          }
+                          window.open('/3pl/autoLogin.php?uid=' + a);
+                        }
+                      </script>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>
+              <span class="m-r-sm text-muted welcome-message" style="font-size:14px; font-weight:bold;">백물류-안성10</span>
+            </li>
+            <li>
+              <a href="/3pl/logOut.php"> <i class="fa fa-sign-out"></i> 로그아웃 </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="row wrapper border-bottom white-bg " style="padding:0px;   height:50px;  ">
+        <div class="col-lg-10" style="padding-top:10px; ">
+          <h3>자동 주문수집</h3>
+        </div>
+      </div>
+
+      <div class="row justify-content-between " style="margin-top:10px; ">
+        <div class="col-lg-8">
+          <div class="panel panel-gray ">
+            <div class="panel-heading " style="padding:0px; margin:0px;">
+              <div class="float-right" style="padding:7px;">
+              </div>
+
+              <div style="font-size:15px; padding:10px 12px; "> 주문현황
+                <span class="label label-warning float-right pointer" style="height: 25px; font-size:13px; padding-top: 6px;">설정</span>
+                <span class="label label-success float-right pointer" style="margin-right:10px; height: 25px; font-size:13px; padding-top: 6px;"><i class="fa-solid fa-arrow-rotate-right" style="margin-right:5px;"></i>새로고침</span>
+              </div>
+
+            </div>
+            <div class="panel-body ma0" style="padding:5px;">
+              <table class="table table-hover no-margins text-center order-collection" style="border: 1px solid #e7eaec;">
+                <thead>
+                  <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">수집방법</th>
+                    <th rowspan="2">판매채널</th>
+                    <th colspan="6">주문현황</th>
+                    <th>주문수집</th>
+                    <th colspan="3">물류센터</th>
+                  </tr>
+                  <tr>
+                    <th>신규</th>
+                    <th>취소</th>
+                    <th>반품</th>
+                    <th>교환</th>
+                    <th>게시판</th>
+                    <th>쪽지</th>
+                    <th><span style="color:#1AB394">▶</span></th>
+                    <th>출고요청</th>
+                    <th>포장중</th>
+                    <th>출고완료</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>자동</td>
+                    <td><a href=""><img src="img/SmartStore_btn.png" alt="" style="margin-right:3px;"></a>(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>자동</td>
+                    <td><img src="img/coupang_btn.png" alt="" style="margin-right:3px;"></a>(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td colspan="10" style="height: 47px;">로그인에 실패했습니다. 아이디와 비밀번호를 확인해주세요.</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td colspan="10" style="height: 47px;"></td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>자동</td>
+                    <td>다다쇼핑(cafe24)</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td class="bgGreen"><button>주문수집</button></td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>15</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .order-collection > tbody > tr > td {
+          border: 1px solid #e7eaec;
+          vertical-align: middle;
+        }
+
+        .order-collection > thead > tr > th {
+          border: 1px solid #ddd;
+          vertical-align: middle;
+        }
+
+        button{
+          background-color: #1AB394;
+          border:none;
+          border-radius: 5px;
+          color: #fff;
+          height: 30px;
+          font-size: 12px;
+        }
+
+        .bgGreen{
+          background-color: #1ab39440;
+        }
+      </style>
+
+
+</body>
+
+</html>
